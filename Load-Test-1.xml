@@ -12,6 +12,33 @@
     <con:setting id="IncludeHelp">true</con:setting>
     <con:setting id="FlowLayout">false</con:setting>
     <con:setting id="b842a7e8-120a-4718-95a4-13274f119a87fileName">Load-Test-1</con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.LoadUITestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Settings File Password" value=""/>
+  <con:entry key="" value=""/>
+  <con:entry key="Local Mode" value="false"/>
+  <con:entry key="SelectedStatistics" value=""/>
+  <con:entry key="Target Number Limit" value=""/>
+  <con:entry key="Group results" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Create Reports" value="false"/>
+  <con:entry key="Test Duration Limit" value=""/>
+  <con:entry key="Abort Requests" value=""/>
+  <con:entry key="Report Format" value="Default"/>
+  <con:entry key="Agents" value=""/>
+  <con:entry key="JUnit-Style Results" value="false"/>
+  <con:entry key="Arriving/Base VUs" value=""/>
+  <con:entry key="Statistics" value=""/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Failure Limit" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Project password" value=""/>
+  <con:entry key="Environment" value="virt"/>
+  <con:entry key="ExportStatistics" value="New Statistics Group;;New Statistics Group 1;;"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Performance Test" value="Load Test 1"/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
   </con:settings>
   <con1:loadui-project id="c7fee619-c7af-4659-8484-1d80bec31cb2" label="Load Test 1" xmlns:con1="http://eviware.com/loadui/config">
     <con1:properties>
@@ -27,7 +54,7 @@
       <con1:property propagates="true" key="ModelItem.id" type="java.lang.String">b842a7e8-120a-4718-95a4-13274f119a87</con1:property>
     </con1:properties>
     <con1:attributes>
-      <con1:property key="limits">Time=600;</con1:property>
+      <con1:property key="limits">Time=60;</con1:property>
     </con1:attributes>
     <con1:addons>
       <con1:addon type="com.eviware.loadui.api.assertion.AssertionAddon" id="c4a40c62-e0db-45cf-a02b-540125fc38b0">
@@ -74,7 +101,7 @@
         <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=600;</con1:property>
+        <con1:property key="limits">Time=60;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 1" id="180ba367-1077-42a4-a5df-0c14c93901cd" category="Scheduler">
@@ -183,7 +210,7 @@
         <con1:property propagates="true" key="ModelItem.samplerOutputLevel" type="com.eviware.loadui.api.component.SoapUISamplerOutputLevel">TestCaseAndAllTestSteps</con1:property>
       </con1:properties>
       <con1:attributes>
-        <con1:property key="limits">Time=600;</con1:property>
+        <con1:property key="limits">Time=60;</con1:property>
       </con1:attributes>
       <con1:addons/>
       <con1:component type="com.eviware.loadui.impl.component.IntervalComponent" label="Interval 2" id="ac2aba83-ee80-4635-a1fd-336dcca810b8" category="Scheduler">
@@ -229,7 +256,7 @@
           <con1:property propagates="true" key="stateProperty" type="java.lang.Boolean">false</con1:property>
           <con1:property propagates="true" key="limitVU" type="java.lang.Long">100</con1:property>
           <con1:property propagates="true" key="times" type="[J">68,68,379,553,755</con1:property>
-          <con1:property propagates="true" key="vus" type="[J">19,19,2,17,4</con1:property>
+          <con1:property propagates="true" key="vus" type="[J">10,10,1,9,2</con1:property>
           <con1:property propagates="true" key="waitTime" type="java.lang.Long">1000</con1:property>
         </con1:properties>
         <con1:attributes>
