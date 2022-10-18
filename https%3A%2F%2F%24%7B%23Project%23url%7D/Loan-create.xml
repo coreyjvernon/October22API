@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Loan-create" path="/loan/loan-create" id="d1209f11-3cde-48a3-a516-7ce7b090c30c" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d1209f11-3cde-48a3-a516-7ce7b090c30cfileName">Loan-create</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Loan-create" id="29d45fb2-597a-4cff-a3a9-e1aed5f6a753" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Loan Create - Dev" id="7c1e1971-7187-4a8c-84e3-ebdaa6b233aa" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://${#Project#url}</con:endpoint>
+      <con:request>{\r
+  "assetID": "{{assetID}}",\r
+  "content": {\r
+    "coreSpecificFields": {\r
+      "balanceCategoryCode": "string",\r
+      "loanLossCategoryCode": "string",\r
+      "majorAccountTypeCode": "string",\r
+      "paymentBalanceCategoryCode": "string",\r
+      "paymentBalanceTypeCode": "string",\r
+      "paymentCalendarPeriodCode": "string",\r
+      "paymentTypeCode": "string",\r
+      "rtxnTypeCode": "string"\r
+    },\r
+    "loan": {\r
+      "customers": [\r
+        {\r
+          "addresses": [\r
+            {\r
+              "addressType": "Current",\r
+              "city": "string",\r
+              "country": "string",\r
+              "numberOfYears": 0,\r
+              "numberOfMonths": 0,\r
+              "postalCode": "string",\r
+              "postalExtension": "string",\r
+              "state": "string",\r
+              "streetName": "string",\r
+              "streetNumber": "string",\r
+              "suite": "string"\r
+            }\r
+          ],\r
+          "annualIncome": 0,\r
+          "birthDate": "2019-08-24",\r
+          "dependentCount": 0,\r
+          "emailAddress": "user@example.com",\r
+          "employer": {\r
+            "city": "string",\r
+            "currentEmploymentYearsOnJob": 0,\r
+            "employerName": "string",\r
+            "isSelfEmployed": true,\r
+            "numberOfYears": 0,\r
+            "positionTitle": "string",\r
+            "postalCode": "string",\r
+            "state": "string",\r
+            "streetName": "string",\r
+            "streetNumber": "string",\r
+            "suite": "string",\r
+            "telephoneNumber": "string"\r
+          },\r
+          "governmentMonitoring": {\r
+            "gender": "Male",\r
+            "ethnicity": "American Indian or Alaskan Native",\r
+            "race": "American Indian or Alaska Native"\r
+          },\r
+          "isTinCertification": true,\r
+          "jointAssetLiabilityReportingType": "string",\r
+          "name": {\r
+            "businessName": "string",\r
+            "firstName": "Tom",\r
+            "lastName": "Thomas",\r
+            "legalName": "string",\r
+            "middleName": "string",\r
+            "prefix": "string",\r
+            "suffix": "string"\r
+          },\r
+          "maritalStatusType": "Married",\r
+          "phoneNumbers": [\r
+            {\r
+              "areaCode": "string",\r
+              "extension": "string",\r
+              "number": "string",\r
+              "phoneType": "Fax"\r
+            }\r
+          ],\r
+          "presentHousingExpense": {\r
+            "housingExpenseType": "Own",\r
+            "paymentAmount": 0,\r
+            "description": "string"\r
+          },\r
+          "relationshipType": "Borrower",\r
+          "taxID": "string",\r
+          "tinCertDate": "2019-08-24",\r
+          "tinType": "SSN"\r
+        }\r
+      ],\r
+      "collateral": [\r
+        {\r
+          "collateralCode": "string",\r
+          "collateralDetails": {\r
+            "addresses": [\r
+              {}\r
+            ],\r
+            "blockNumber": "string",\r
+            "financedNumberOfUnits": "string",\r
+            "lienPosition": "string",\r
+            "lotNumber": "string",\r
+            "occupancyCode": "string",\r
+            "propertyCensusCode": "string",\r
+            "propertyMsaCode": "string",\r
+            "propertyType": "string",\r
+            "propertyParcelNumber": "string",\r
+            "sectionNumber": "string",\r
+            "structureBuiltYear": "string"\r
+          },\r
+          "collateralDescription": "string"\r
+        }\r
+      ],\r
+      "escrows": [\r
+        {\r
+          "automaticDisbursementIndicator": "s",\r
+          "automaticDisbursementLeadDays": 0,\r
+          "automaticDisbursementStatus": "s",\r
+          "checkGroupNumber": 0,\r
+          "currentFHAAnniversary": "string",\r
+          "currentPremium": 0,\r
+          "customerRecipientCode": "s",\r
+          "discursementExceptionIndicator": "s",\r
+          "discursementFrequency": "s",\r
+          "escrowActiveInactiveIndicator": "s",\r
+          "escrowCheckRecipient": "s",\r
+          "escrowCollectionMethod": "s",\r
+          "escrowCompanyCategory": "str",\r
+          "escrowCompanySubcategory": "st",\r
+          "escrowDisbursmentCalculationMethod": "s",\r
+          "escrowInterestIndicator": "s",\r
+          "escrowInstallmentDisbursment": [\r
+            {\r
+              "disbursmentAmount": 0,\r
+              "disbursmentDate": "stri"\r
+            }\r
+          ],\r
+          "escrowRate": 0,\r
+          "escrowSegmentNumber": 0,\r
+          "escrowStatusIndicator": "s",\r
+          "escrowType": "s",\r
+          "evenAmountEscrowDisbursmentIndicator": "s",\r
+          "guaranteeNumber": "string",\r
+          "insuranceCoverageAmount": 0,\r
+          "insuranceExpirationDate": "2019-08-24",\r
+          "isCollected": true,\r
+          "lastEscrowDisbursementAmount": 0,\r
+          "lastEscrowDisbursementDate": "string",\r
+          "lnAccountNumber": 634717,\r
+          "lnNoteNumber": 123,\r
+          "maintenanceCode": "s",\r
+          "nextEscrowDisbursementAmount": 0,\r
+          "nextExpectedDisbursementDate": "2019-08-24",\r
+          "nextPayDate": "2019-08-24",\r
+          "numberOfEscrowDisbursementInstallments": 0,\r
+          "payeeNumber": "string",\r
+          "paymentGraceDays": 0,\r
+          "pendingFHAAnniversary": "string",\r
+          "pendingPremium": 0,\r
+          "premiumCalculationMethod": "st",\r
+          "priorYearToDateDisbursedAmount": 0,\r
+          "r7360RequestPrintIndicator": "s",\r
+          "source": "str",\r
+          "taxInsuranceIdentificationMaintenanceCode": "s",\r
+          "taxInsuranceIdentificationNumber": "string",\r
+          "taxInsurancePolicyNumber": "string",\r
+          "transactionCode": 0,\r
+          "trtsAddsTransactionIndicator": "s",\r
+          "trtsContractSuffix": 0,\r
+          "trtsHitCode": "s",\r
+          "userCode": "string",\r
+          "yearToDateEscrowDistributionAmount": 0\r
+        }\r
+      ],\r
+      "loanDetails": {\r
+        "accountInformation": {\r
+          "accountType": "L",\r
+          "accountNumber": "634717",\r
+          "description": "Mortgage"\r
+        },\r
+        "allotmentType": "string",\r
+        "annualPercentageRate": 0,\r
+        "arm": {\r
+          "capReviewDate": "2019-08-24",\r
+          "capTerm": "string",\r
+          "capTermCode": "string",\r
+          "capUpwardDownwardRate": 0,\r
+          "ceiling": "string",\r
+          "changeNoticeDays": "string",\r
+          "floor": "string",\r
+          "rateIndex": 0,\r
+          "reamortizePayment": 0,\r
+          "reamortizePaymentDate": "2019-08-24",\r
+          "reamortizeTerm": 0,\r
+          "reamortizeTermCode": "string",\r
+          "reviewDate": "2019-08-24",\r
+          "reviewTerm": 0,\r
+          "reviewTermCode": "string",\r
+          "roundingMethod": "string",\r
+          "roundToAmount": 0,\r
+          "variance": "string"\r
+        },\r
+        "applicationDate": "2019-08-24",\r
+        "appraisalDate": "2019-08-24",\r
+        "appraisalAmount": 0,\r
+        "balloonAmount": 0,\r
+        "balloonDueDate": "2019-08-24",\r
+        "billingMethodCode": "string",\r
+        "billingMethod": "string",\r
+        "callReportCode": "string",\r
+        "closingRequestSubmittedDate": "2019-08-24",\r
+        "combinedLoanToValue": "string",\r
+        "couponBookDate": "2019-08-24",\r
+        "couponBookTerm": 0,\r
+        "creditLimit": 0,\r
+        "creditReportType": "string",\r
+        "currentAccountStatusCode": "string",\r
+        "debtToIncomeRatio": 0,\r
+        "downPaymentAmount": 0,\r
+        "fasb": [\r
+          {\r
+            "amoritizationTerm": "string",\r
+            "amount": 0,\r
+            "fasbAmoritizationMethod": "string",\r
+            "fasbType": "Fee"\r
+          }\r
+        ],\r
+        "fdicCategoryCode": "string",\r
+        "governmentCaseNumber": "string",\r
+        "governementIndicator": "FHA",\r
+        "highPricedMortgageCode": "string",\r
+        "highPricedMortgageRate": 0,\r
+        "institutionDetails": {\r
+          "branchName": "string",\r
+          "branchNumber": "string",\r
+          "bankNumber": "string"\r
+        },\r
+        "interest": {\r
+          "interestAccrualBase": 0,\r
+          "interestAmount": 0,\r
+          "interestCalculationMethod": "string",\r
+          "interestRate": 0,\r
+          "prepaidInterestAmount": 0,\r
+          "totalInterest": 0\r
+        },\r
+        "is1098": true,\r
+        "isBalloon": true,\r
+        "isFirstTimeHomebuyer": true,\r
+        "isMers": true,\r
+        "isSalableLoan": true,\r
+        "lateCharge": {\r
+          "gracePeriod": 0,\r
+          "rate": 0,\r
+          "lateChargeAmount": 0,\r
+          "lateChargeDays": 0,\r
+          "minimumLateChargeAmount": 0,\r
+          "maximumLateChargeAmount": 0\r
+        },\r
+        "loanAmount": 0,\r
+        "loanToValue": 0,\r
+        "loanType": "BL",\r
+        "maturityDate": "2019-08-24",\r
+        "mersNumber": "string",\r
+        "netProceeds": 0,\r
+        "officers": [\r
+          {\r
+            "officerCode": "string",\r
+            "officerEmail": "string",\r
+            "officerName": "string",\r
+            "officerType": "Broker"\r
+          }\r
+        ],\r
+        "payments": [\r
+          {\r
+            "paymentAmount": 0,\r
+            "paymentDate": "2019-08-24",\r
+            "paymentType": "InterestOnly",\r
+            "piAmount": "string"\r
+          }\r
+        ],\r
+        "productCode": "BL",\r
+        "productName": "Loan",\r
+        "printCouponCode": "string",\r
+        "purposeCode": "string",\r
+        "qualifiedMortgageCode": 0,\r
+        "qualifiedMortgageRate": 0,\r
+        "riskRatingCode": "string",\r
+        "term": 0,\r
+        "termCode": "string"\r
+      },\r
+      "sbaDetails": {\r
+        "processingMethod": "string",\r
+        "sbaApprovalDate": "2019-08-24",\r
+        "sbaGuarantyFee": 0,\r
+        "sbaLoanNumber": "string",\r
+        "sbaGuarantyPercent": 0\r
+      },\r
+      "userFields": [\r
+        {\r
+          "key": "string",\r
+          "value": "string"\r
+        }\r
+      ]\r
+    }\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

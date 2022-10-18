@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Loan-search" path="/v2/loan/loan-search" id="f8db8301-e30a-44d1-8e22-8b7f5542b543" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f8db8301-e30a-44d1-8e22-8b7f5542b543fileName">Loan-search</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Loan-search" id="888c6b8b-415c-46ad-a975-590334bc2456" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Loan Search" id="e7655d48-698a-430b-b81c-b0ef078cd62f" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+    "assetID": "jxchange_api_test",\r
+    "content": {\r
+        "accountNumber": "521",\r
+        "accountType": "L"\r
+            },\r
+    "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Customer-relationship-create" path="/v2/customer/customer-relationship-create" id="7f7dc500-ea0f-4481-b9e1-20d1843ed3c1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7f7dc500-ea0f-4481-b9e1-20d1843ed3c1fileName">Customer-relationship-create</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Customer-relationship-create" id="f6648370-a2ab-412d-9e2b-8b1f81fafc26" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Relationship Create" id="084c92e7-be77-484d-81d9-380151b290de" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "accountInformation": {\r
+      "accountType": "D",\r
+      "description": "",\r
+      "accountNumber": "98198",\r
+      "transactionCode": ""\r
+    },\r
+    "relationshipInformation": [\r
+      {\r
+        "customerID": "SAA5383",\r
+        "accountRelationshipDescription": "JO",\r
+        "accountRelationshipOrder": "",\r
+        "accountRelationshipType": "JO",\r
+        "primaryOwnerIndicator": true,\r
+        "taxReportingOwnerIndicator": true,\r
+        "beneficialOwnerPercent": 25.00,\r
+        "beneficialOwnerType": "Controlling Owner"\r
+      }\r
+    ]\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Customer-create" path="/v2/customer/customer-create" id="ccb6747b-a9fd-499f-bef4-48ed79d3fc5f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ccb6747b-a9fd-499f-bef4-48ed79d3fc5ffileName">Customer-create</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Customer-create" id="d6862395-f5c3-4c26-a49c-b3481d37f04a" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Customer Create" id="87937bad-9286-4ae4-8033-e9cbe9463ba7" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "branchNumber": "",\r
+    "customerBase": {\r
+      "tinCertification": "Certified",\r
+      "citizenshipCountry": "US",\r
+      "customerType": "P",\r
+      "dob": "1962-11-15",\r
+      "email": {\r
+        "emailAddress": "tcplf1@nxtsoft.com",\r
+        "emailType": "Home"\r
+      },\r
+      "employments": [\r
+        {\r
+          "address": [\r
+            {\r
+              "city": "Chicago",\r
+              "country": "US",\r
+              "state": "IL",\r
+              "streetNumber": "70",\r
+              "streetName": "E. Lake St.",\r
+              "suite": "1500",\r
+              "addressType": "Current",\r
+              "postalCode": "60601",\r
+              "postalExtension": ""\r
+            }\r
+          ],\r
+          "phone": {\r
+            "areaCode": "312",\r
+            "countryCode": "1",\r
+            "extension": "",\r
+            "number": "5551234",\r
+            "phoneType": "Home"\r
+          },\r
+          "hoursPerWeek": 0,\r
+          "employerName": "NXTsoft",\r
+          "occupation": "API Dev",\r
+          "salary": 10000,\r
+          "salaryFrequency": "MONTHLY",\r
+          "status": "",\r
+          "type": "Current",\r
+          "title": "Developer"\r
+        }\r
+      ],\r
+      "fincenExempt": "NP",\r
+      "idList": [\r
+        {\r
+          "expirationDate": "2025-08-24",\r
+          "issueDate": "2019-08-24",\r
+          "issuer": "US",\r
+          "type": "DL",\r
+          "value": "erty457"\r
+        }\r
+      ],\r
+      "annualIncome": 10000,\r
+      "isEmployee": true,\r
+      "name": {\r
+        "businessName": "",\r
+        "firstName": "Joe",\r
+        "lastName": "Smithers",\r
+        "legalName": "",\r
+        "middleName": "C",\r
+        "prefix": "Mr",\r
+        "suffix": "Jr"\r
+      },\r
+      "phones": [\r
+        {\r
+          "areaCode": "847",\r
+          "countryCode": "1",\r
+          "extension": "",\r
+          "number": "5554321",\r
+          "phoneType": "Mobile"\r
+        }\r
+      ],\r
+      "residences": [\r
+        {\r
+          "addressLastChanged": "2019-08-24",\r
+          "addressLastVerify": "2019-08-24",\r
+          "addressType": "Current",\r
+          "city": "Chicago",\r
+          "country": "US",\r
+          "mailDirectoryCode": "IL",\r
+          "numberOfMonths": 24,\r
+          "numberOfYears": 2,\r
+          "postalCode": "60601",\r
+          "postalExtension": "",\r
+          "seasonBeginDate": "2019-08-24",\r
+          "seasonEndDate": "2019-08-24",\r
+          "seasonReoccur": "Y",\r
+          "state": "IL",\r
+          "streetNumber": "70",\r
+          "streetName": "Oak St.",\r
+          "subType": "",\r
+          "suite": "550"\r
+        }\r
+      ],\r
+      "taxID": "275011245",\r
+      "taxIDType": "P",\r
+      "taxWithholding": true\r
+    },\r
+    "officerCode": "SAY"\r
+  },\r
+  "uuid": ""\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

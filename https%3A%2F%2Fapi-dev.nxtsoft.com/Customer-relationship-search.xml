@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Customer-relationship-search" path="/v2/jack-henry/jxchange/customer/customer-relationship-search" id="d81bd5e7-bd32-4508-89cd-ed8e3b423a1d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d81bd5e7-bd32-4508-89cd-ed8e3b423a1dfileName">Customer-relationship-search</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Customer-relationship-search" id="bccff7a0-74e1-4177-9f31-60137411d9b2" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Relationship Search" id="a2c564a1-fbcb-4d2c-b090-7b5d96682f70" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+    "assetID": "{{assetID}}",\r
+    "content": {\r
+        "customerID": "D000010",\r
+        "excludeClosedAccounts": true,\r
+        "includeCustomerInformation": true,\r
+        "includeAdditionalAccountInformation": true,\r
+        "includeEDistribution": true,\r
+        "includeEBanking": true,\r
+        "includeFrequentConductors": true\r
+    },\r
+    "uuid": ""\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Fidataquery" path="/v2/fidata/fidataquery" id="e506edf6-9df2-4441-8421-ac60895c3b18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e506edf6-9df2-4441-8421-ac60895c3b18fileName">Fidataquery</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Fidataquery" id="6ba8a308-a6ff-4902-95e4-bbb776f571e9" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Fi Data Query" id="02bd0f0a-baff-43ed-b3df-53f60c87a491" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "financialInstitutionRoutingID": "011001276"\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

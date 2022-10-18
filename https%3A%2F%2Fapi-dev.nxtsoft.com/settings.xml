@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="696f0d7f-31fc-40b6-bc23-737b334dc0a3" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api-dev.nxtsoft.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="696f0d7f-31fc-40b6-bc23-737b334dc0a3fileName">https%3A%2F%2Fapi-dev.nxtsoft.com</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+  </con:endpoints>
+</con:interface>

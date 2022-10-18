@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Ach" path="/v2/monetary/ach" id="853a30f5-8cc9-4a6f-9f82-341eb76ab0cc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="853a30f5-8cc9-4a6f-9f82-341eb76ab0ccfileName">Ach</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Ach" id="9c1d0ee5-9104-41cf-952c-d7d49a34d9ca" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="ACH Upload" id="ad6b3062-bdb3-42a3-a91f-e2ef447d8225" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request><![CDATA[{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "achNachaFile": "101 113102552 1131025522101191706A094101R2020 Bank 554         R2020 Bank 554         00095725&#xd;5220MAC ProfessionalMAC PROFESSIONAL    5917591111PPDMAC PRO         2101190001113102552000001&#xd;622011000015123456           0000020020               MAC Tech                0113102552000001&#xd;6271131025521984             0000020020123456789      Sierra Lynn McCaffrey   0113102552000002&#xd;822000000200124102560000000200200000000200205917591111                         113102552000001&#xd;9000001000001000000020012410256000000020020000000020020                                       &#xd;9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999&#xd;9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999&#xd;9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999&#xd;9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999"\r
+  },\r
+  "uuid": "string"\r
+}]]></con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Card-request" path="/deposits/card-request" id="eee012fc-877f-4edb-8f93-cd06f4e4db34" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="eee012fc-877f-4edb-8f93-cd06f4e4db34fileName">Card-request</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Card-request" id="c7ee1a72-796f-4bed-a7e4-2bcbb845eb7d" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Deposit Order Cards" id="6d97594b-0d01-4215-a7b3-674d07cb9abc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://${#Project#url}</con:endpoint>
+      <con:request>{\r
+  "assetID": "{{assetID}}",\r
+  "content": {\r
+    "customerID": "D000010",\r
+    "name": {\r
+      "businessName": "",\r
+      "firstName": "",\r
+      "lastName": "",\r
+      "legalName": "",\r
+      "middleName": "",\r
+      "prefix": "",\r
+      "suffix": ""\r
+    },\r
+    "order": {\r
+      "accountsToLink": [\r
+        {\r
+          "accountNumber": "10010010012",\r
+          "accountType": "D",\r
+          "aliasAccountName": ""\r
+        }\r
+      ],\r
+      "cardType": "ATM",\r
+      "embossedName": "Joe Developer",\r
+      "isOwnerPrimary": ""\r
+    }\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

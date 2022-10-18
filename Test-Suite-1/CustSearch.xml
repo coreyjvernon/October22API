@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f89e43f7-58a3-41d8-aa19-dfca5ecbfedb" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="CustSearch" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f89e43f7-58a3-41d8-aa19-dfca5ecbfedbfileName">CustSearch</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="4dc0417a-59a6-4905-81e3-05eee63dde1a">
+    <con:settings/>
+    <con:config service="https://api-dev.nxtsoft.com" resourcePath="/v2/jack-henry/jxchange/customer/customer-search" methodName="Customer-search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="23af2376-8484-4826-ace3-379e81189951" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+        <con:request>{\r
+    "assetID": "jxchange_api_test",\r
+    "content": {\r
+        "taxID": "444444444",\r
+        "customerID": "D000010"\r
+    },\r
+    "uuid": "string"\r
+}</con:request>
+        <con:originalUri>https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/customer/customer-search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="321f82bd-293c-4a87-a10d-00302d338461" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>nxt2</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

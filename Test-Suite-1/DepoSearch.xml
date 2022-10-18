@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="74c49d0a-77a4-4d39-a605-132d73c33a0d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="DepoSearch" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="74c49d0a-77a4-4d39-a605-132d73c33a0dfileName">DepoSearch</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="ac558965-14a9-4dca-bffb-f45419a3a38b">
+    <con:settings/>
+    <con:config service="https://api-dev.nxtsoft.com" resourcePath="/v2/jack-henry/jxchange/deposits/deposit-search" methodName="Deposit-search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="70083469-95c7-427c-997a-5a2720be6c7c" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+        <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "accountNumber": "55555",\r
+    "accountType": "D"\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+        <con:originalUri>https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/deposits/deposit-search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0ce50ec1-78de-42cc-9e1a-e2b34f8431a5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>nxt2</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

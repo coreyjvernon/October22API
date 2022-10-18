@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Gl-transaction" path="/monetary/gl-transaction" id="46e2e9dd-1a70-48e1-9647-79718deb8521" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="46e2e9dd-1a70-48e1-9647-79718deb8521fileName">Gl-transaction</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Gl-transaction" id="4595986b-f022-4ced-9400-1ee336405e32" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Transfer DR acct CR GL" id="7b728adc-619e-4174-97ef-584b1af736a3" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://${#Project#url}</con:endpoint>
+      <con:request>{\r
+    "assetID": "{{assetID}}",\r
+    "content": {\r
+        "amount": 10.00,\r
+        "batchNumber": "100",\r
+        "description": "transfer funds",\r
+        "effectiveDate": "2021-11-2",\r
+            "fromAccount": {\r
+            "accountNumber": "109686",\r
+            "accountType": "D",\r
+            "transactionCode": ""\r
+        },\r
+            "toAccount": {\r
+            "accountNumber": "1090",\r
+            "accountType": "GL",\r
+            "transactionCode": ""\r
+        },\r
+        "coreSpecificFields": {\r
+            "principalReduction": "N"\r
+        }\r
+    },\r
+    "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="5bcbe7a1-08d2-494c-bb11-d58d796b2efc" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5bcbe7a1-08d2-494c-bb11-d58d796b2efcfileName">Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="ea8a832b-30a0-49f8-a297-e3d0c9c561e5">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/Corey.Vernon/Desktop/Test/Bank1.xlsx</file>
+          <worksheet/>
+          <cell>A1</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>accountNumbers</con:property>
+      <con:startRow>1</con:startRow>
+      <con:endRow/>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="5eecef23-5a38-4698-bf60-1009e1e4b14e">
+    <con:settings/>
+    <con:config service="https://api-dev.nxtsoft.com" resourcePath="/v2/jack-henry/jxchange/deposits/deposit-search" methodName="Deposit-search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="70083469-95c7-427c-997a-5a2720be6c7c" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+        <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "accountNumber": "${Data Source#accountNumbers}",\r
+    "accountType": "D"\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+        <con:originalUri>https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/deposits/deposit-search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="76907f1a-040a-48d0-ab34-a5096355ca5d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="0c70cfd2-1560-4b8c-8ab2-fde565cc8b93" name="Match content of [statusFlag]">
+          <con:configuration>
+            <path>$['statusFlag']</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>nxt2</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request 2" id="920d0509-c0fc-4f3d-a00a-c677190fc5b1">
+    <con:settings/>
+    <con:config service="https://api-dev.nxtsoft.com" resourcePath="/v2/jack-henry/jxchange/customer/customer-search" methodName="Customer-search" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request 2" id="23af2376-8484-4826-ace3-379e81189951" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+        <con:request>{\r
+    "assetID": "jxchange_api_test",\r
+    "content": {\r
+        "taxID": "444444444",\r
+        "customerID": "${REST Request#Response#$['content'][0]['accountDetail']['customerRelationships'][0]['customerID']}"\r
+    },\r
+    "uuid": "string"\r
+}</con:request>
+        <con:originalUri>https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/customer/customer-search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="87e3db5a-62da-4231-ab37-d2c068b2fc6b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>nxt2</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="00160287-37be-4498-ab9b-4a8b2fe9247c">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>REST Request</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

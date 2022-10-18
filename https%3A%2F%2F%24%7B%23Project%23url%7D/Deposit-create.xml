@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Deposit-create" path="/deposits/deposit-create" id="c0e501a0-9668-4f4a-80b7-6701bc110242" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c0e501a0-9668-4f4a-80b7-6701bc110242fileName">Deposit-create</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Deposit-create" id="d735e5c9-0e6a-4591-9022-e8e8cb7a508b" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Deposit Create - Dev" id="449389f2-d9b5-44f7-89f9-4252ce3973cc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://${#Project#url}</con:endpoint>
+      <con:request>{\r
+    "assetID": "{{assetID}}",\r
+    "content": {\r
+        "accountBase": {\r
+            "accountType": "D",\r
+            "regEOption": "string",\r
+            "statementMailingAddress": {\r
+                "addressType": "Current",\r
+                "city": "Chicago",\r
+                "country": "US",\r
+                "postalCode": "60601",\r
+                "postalExtension": "string",\r
+                "residenceType": "Own",\r
+                "state": "IL",\r
+                "streetName": "Lake",\r
+                "streetNumber": "70",\r
+                "suite": "string"\r
+            },\r
+            "subAccountType": "string"\r
+        },\r
+        "accountDetail": {\r
+            "accountClassCode": "I",\r
+            "balance": 0,\r
+            "beneficiaries": [\r
+                {\r
+                    "accountOwnerRelationship": "string",\r
+                    "address": {\r
+                        "city": "string",\r
+                        "country": "string",\r
+                        "state": "string",\r
+                        "streetNumber": "string",\r
+                        "streetName": "string",\r
+                        "suite": "string",\r
+                        "addressType": "Current",\r
+                        "postalCode": "string",\r
+                        "postalExtension": "string"\r
+                    },\r
+                    "customerID": "DAA2527",\r
+                    "distribution": "string",\r
+                    "dob": "1990-08-24",\r
+                    "name": {\r
+                        "businessName": "string",\r
+                        "firstName": "string",\r
+                        "lastName": "string",\r
+                        "legalName": "string",\r
+                        "middleName": "string",\r
+                        "prefix": "string",\r
+                        "suffix": "string"\r
+                    },\r
+                    "idList": [\r
+                        {\r
+                            "expirationDate": "2025-08-24",\r
+                            "issueDate": "2019-08-24",\r
+                            "issuer": "string",\r
+                            "type": "BirthCertificate",\r
+                            "value": "string"\r
+                        }\r
+                    ],\r
+                    "email": {\r
+                        "emailAddress": "test@nxtsoft.com",\r
+                        "emailType": "Home"\r
+                    },\r
+                    "taxID": "string",\r
+                    "phones": [\r
+                        {\r
+                            "areaCode": "string",\r
+                            "countryCode": "string",\r
+                            "extension": "string",\r
+                            "number": "string",\r
+                            "phoneType": "Fax"\r
+                        }\r
+                    ]\r
+                }\r
+            ],\r
+            "branchNumber": "10",\r
+            "customerID": "string",\r
+            "costCenter": "0",\r
+            "customerRelationships": [\r
+                {\r
+                    "customerID": "string",\r
+                    "liabilityAmount": 0,\r
+                    "liabilityPercent": 0,\r
+                    "name": {\r
+                        "businessName": "string",\r
+                        "firstName": "string",\r
+                        "lastName": "string",\r
+                        "legalName": "string",\r
+                        "middleName": "string",\r
+                        "prefix": "string",\r
+                        "suffix": "string"\r
+                    },\r
+                    "otherRelationshipDescription": "string",\r
+                    "relationshipCode": "string"\r
+                }\r
+            ],\r
+            "index": 0,\r
+            "interestMethod": 0,\r
+            "interestRate": 0,\r
+            "name": {\r
+                "businessName": "string",\r
+                "firstName": "string",\r
+                "lastName": "string",\r
+                "legalName": "string",\r
+                "middleName": "string",\r
+                "prefix": "string",\r
+                "suffix": "string"\r
+            },\r
+            "nextRateChangeDate": "2025-08-24",\r
+            "openDate": "2021-11-29",\r
+            "officerCode": "PAM",\r
+            "productName": "Checking",\r
+            "productType": "D",\r
+            "rateAdjuster": "6",\r
+            "rateChangeFrequency": "string",\r
+            "rateReviewTerm": 0,\r
+            "serviceChargeWaiveReason": "Chg",\r
+            "statementCycle": "1",\r
+            "statementFrequency": "1",\r
+            "statementType": "Paper"\r
+        },\r
+        "accountInformation": {\r
+            "accountType": "D",\r
+            "description": "Checking",\r
+            "accountNumber": "442798",\r
+            "transactionCode": "string"\r
+        },\r
+        "accountServices": {\r
+            "accountToLink": "string",\r
+            "billPayment": false,\r
+            "directDeposit": false,\r
+            "eStatements": false,\r
+            "onlineBanking": false,\r
+            "onlineBankingPassword": false,\r
+            "overdraftProtection": false,\r
+            "overdraftProtectionAccounts": [\r
+                {\r
+                    "account": {\r
+                        "accountType": "string",\r
+                        "description": "string",\r
+                        "accountNumber": "string",\r
+                        "transactionCode": "string"\r
+                    },\r
+                    "overDraftOption": "true",\r
+                    "drawSequence": 0\r
+                }\r
+            ],\r
+            "registerDebitCard": false,\r
+            "debitCardOptions": "string",\r
+            "debitCardHolderPrimary": "string",\r
+            "debitCardHolderJoint": "string",\r
+            "registerChecks": false,\r
+            "registerOverdraftProtection": false,\r
+            "registerAtmCard": false\r
+        },\r
+        "coreSpecificFields": {\r
+            "chargeContinuousODFee": true,\r
+            "closeOnZeroBalance": true,\r
+            "costCenter": "0",\r
+            "DDCHGBFEE": true,\r
+            "highVolumeAccount": "",\r
+            "imageCreditCode": "",\r
+            "imageFrontBackCode": "",\r
+            "imageStatements": true,\r
+            "interestCycleCode": "",\r
+            "isCheckGuaranty": true,\r
+            "isCombinedStatement": true,\r
+            "isRedepositAllowed": true,\r
+            "isSignatureVerificationRequired": true,\r
+            "itemsPerPage": 0,\r
+            "listPosted": true,\r
+            "maxNsfCharge": "595.00",\r
+            "maxODCharge": "595.00",\r
+            "maxUcfCharge": "595.00",\r
+            "numAllowRedDepItems": 1,\r
+            "odRegulationReportCode": "",\r
+            "orderAtmCard": true,\r
+            "printAddendaRecords": "",\r
+            "printChecksInCheckOrder": "Y",\r
+            "sendRedepositNotice": true,\r
+            "serviceChargeCode": "",\r
+            "serviceChargeCycleCode": "",\r
+            "serviceChargeType": "",\r
+            "statementCycleCode": 0,\r
+            "statementPassbookIndicator": "NA",\r
+            "statementResetFrequencyCode": ""\r
+        }\r
+    },\r
+    "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

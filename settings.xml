@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="f07d39f9-cc89-41b6-ac10-b23c5d0bc2ea" created="3.41.1" activeEnvironment="Default environment" name="NXTsoft JXChange Sandbox" resourceRoot="" updated="3.41.1" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>url</con:name>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer>
+    <con:oAuth2Profile>
+      <con:name>nxt</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://auth.nxtsoft.com/oauth2/token</con:authorizationURI>
+      <con:accessTokenURI>https://auth.nxtsoft.com/oauth2/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:clientID>16fqgi4m985omi53cl3km82vih</con:clientID>
+      <con:clientSecret>tvs2mklce87a3a73b930ni6s06ftcritbf9eb6pn24geimbseqb</con:clientSecret>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>nxt2</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenURI>https://auth.nxtsoft.com/oauth2/token</con:accessTokenURI>
+      <con:accessToken>eyJraWQiOiJyVk1SeUtqelBpRll5eWJWZFFIRmE2b1oxa1E3MlJhVENvSW9ENWdZSGJrPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNmZxZ2k0bTk4NW9taTUzY2wza204MnZpaCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoidHJhbnNhY3Rpb25zXC9wb3N0IiwiYXV0aF90aW1lIjoxNjY2MTIwODUxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl91NTY2V21yUEsiLCJleHAiOjE2NjYxMjQ0NTEsImlhdCI6MTY2NjEyMDg1MSwidmVyc2lvbiI6MiwianRpIjoiNzEwMDcyZDctY2IxZi00NTM2LWI0MjktNjVhN2E2OGNiOGU0IiwiY2xpZW50X2lkIjoiMTZmcWdpNG05ODVvbWk1M2NsM2ttODJ2aWgifQ.obHktM7wXvuxpCK7jUIC1vub0pBScwrpraRSQPNz4OgeD5CidPdRDyfDW5kNPScEeB7TTLSJaOcGpRAP92pbWDZKCHeqmHXvfNudBHHgAjqd_6_hmyepybwe2zJv7xN1OAocAFpxZUfy07SeOr2l50ZgxBvaoLXabYz3j3inOa0f6c9ve0RCOAlQszUlR8s7NPDGyVek7DBXEIk5pmDyqq5yI1Pi1jCXPzrBzU6SwQ9G4_JKvCWcprqJaWAmC3PVp4hMRWz7ZcnPvo3AqsRa_xNqyRd2x7qqX6O5mjiWDVPmJggQ0ODPJ7UV4zUYJoRsgtzjUILy8i2b_DvCou03Ow</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
+      <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
+      <con:accessTokenIssuedTime>1666120851</con:accessTokenIssuedTime>
+      <con:clientID>16fqgi4m985omi53cl3km82vih</con:clientID>
+      <con:clientSecret>tvs2mklce87a3a73b930ni6s06ftcritbf9eb6pn24geimbseqb</con:clientSecret>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:accessTokenExpirationTime>3600</con:accessTokenExpirationTime>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+    <con:oAuth2Profile>
+      <con:name>nxt3</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth2Profile>
+  </con:oAuth2ProfileContainer>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository>
+    <con:oAuth20AuthEntry>
+      <con:name>nxt</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:authorizationURI>https://auth.nxtsoft.com/oauth2/token</con:authorizationURI>
+      <con:accessTokenURI>https://auth.nxtsoft.com/oauth2/token</con:accessTokenURI>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:clientID>16fqgi4m985omi53cl3km82vih</con:clientID>
+      <con:clientSecret>tvs2mklce87a3a73b930ni6s06ftcritbf9eb6pn24geimbseqb</con:clientSecret>
+      <con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>nxt2</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenURI>https://auth.nxtsoft.com/oauth2/token</con:accessTokenURI>
+      <con:accessToken>eyJraWQiOiJyVk1SeUtqelBpRll5eWJWZFFIRmE2b1oxa1E3MlJhVENvSW9ENWdZSGJrPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxNmZxZ2k0bTk4NW9taTUzY2wza204MnZpaCIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoidHJhbnNhY3Rpb25zXC9wb3N0IiwiYXV0aF90aW1lIjoxNjY2MTIwODUxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtd2VzdC0yLmFtYXpvbmF3cy5jb21cL3VzLXdlc3QtMl91NTY2V21yUEsiLCJleHAiOjE2NjYxMjQ0NTEsImlhdCI6MTY2NjEyMDg1MSwidmVyc2lvbiI6MiwianRpIjoiNzEwMDcyZDctY2IxZi00NTM2LWI0MjktNjVhN2E2OGNiOGU0IiwiY2xpZW50X2lkIjoiMTZmcWdpNG05ODVvbWk1M2NsM2ttODJ2aWgifQ.obHktM7wXvuxpCK7jUIC1vub0pBScwrpraRSQPNz4OgeD5CidPdRDyfDW5kNPScEeB7TTLSJaOcGpRAP92pbWDZKCHeqmHXvfNudBHHgAjqd_6_hmyepybwe2zJv7xN1OAocAFpxZUfy07SeOr2l50ZgxBvaoLXabYz3j3inOa0f6c9ve0RCOAlQszUlR8s7NPDGyVek7DBXEIk5pmDyqq5yI1Pi1jCXPzrBzU6SwQ9G4_JKvCWcprqJaWAmC3PVp4hMRWz7ZcnPvo3AqsRa_xNqyRd2x7qqX6O5mjiWDVPmJggQ0ODPJ7UV4zUYJoRsgtzjUILy8i2b_DvCou03Ow</con:accessToken>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:accessTokenStatus>RETRIEVED_FROM_SERVER</con:accessTokenStatus>
+      <con:accessTokenStartingStatus>RETRIEVED_FROM_SERVER</con:accessTokenStartingStatus>
+      <con:accessTokenIssuedTime>1666120851</con:accessTokenIssuedTime>
+      <con:clientID>16fqgi4m985omi53cl3km82vih</con:clientID>
+      <con:clientSecret>tvs2mklce87a3a73b930ni6s06ftcritbf9eb6pn24geimbseqb</con:clientSecret>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:accessTokenExpirationTime>3600</con:accessTokenExpirationTime>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+    <con:oAuth20AuthEntry>
+      <con:name>nxt3</con:name>
+      <con:type>OAuth 2.0</con:type>
+      <con:accessTokenPosition>HEADER</con:accessTokenPosition>
+      <con:oAuth2Flow>CLIENT_CREDENTIALS_GRANT</con:oAuth2Flow>
+      <con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod>
+      <con:jwtConfiguration/>
+      <con:responseType>id_token</con:responseType>
+    </con:oAuth20AuthEntry>
+  </con:authRepository>
+  <con:tags/>
+</con:soapui-project>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Deposit-search" path="/v2/jack-henry/jxchange/deposits/deposit-search" id="fae2c01f-f817-4785-b38a-f1be734d3654" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="fae2c01f-f817-4785-b38a-f1be734d3654fileName">Deposit-search</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Deposit-search" id="f3b64760-2a1e-4244-9490-2ecb22604969" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:dep="https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/deposits/deposit-search">dep:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:dep="https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/deposits/deposit-search">dep:Fault</con:element>
+    </con:representation>
+    <con:request name="Deposit Search" id="70083469-95c7-427c-997a-5a2720be6c7c" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "accountNumber": "11111",\r
+    "accountType": "D"\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+      <con:originalUri>https://api-dev.nxtsoft.com/v2/jack-henry/jxchange/deposits/deposit-search</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

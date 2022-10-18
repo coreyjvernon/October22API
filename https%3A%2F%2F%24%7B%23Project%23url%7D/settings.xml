@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="95390b9f-7ff2-4f4a-96d4-40857c82c668" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://${#Project#url}" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="95390b9f-7ff2-4f4a-96d4-40857c82c668fileName">https%3A%2F%2F%24%7B%23Project%23url%7D</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://${#Project#url}</con:endpoint>
+  </con:endpoints>
+</con:interface>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Servicedictionaryquery" path="/v2/jack-henry/jxchange/fidata/servicedictionaryquery" id="055dd1ec-b38c-4da3-847c-12368d5deedc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="055dd1ec-b38c-4da3-847c-12368d5deedcfileName">Servicedictionaryquery</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Servicedictionaryquery" id="c6cfe4d4-82f7-4285-8fd8-031a74b50276" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Fi Data Service Dictionary" id="246f0bdc-25b4-4373-b38e-7ceb659185d9" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api-dev.nxtsoft.com</con:endpoint>
+      <con:request>{\r
+  "assetID": "jxchange_api_test",\r
+  "content": {\r
+    "serviceDictionaryName": "AcctInq",\r
+    "serviceDictionaryType": "Rs",\r
+    "serviceDictionaryFilter": [\r
+        {\r
+            "filterInformation": {\r
+                "code": "AcctType",\r
+                "value": "D"\r
+            }\r
+        }\r
+    ]\r
+  },\r
+  "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

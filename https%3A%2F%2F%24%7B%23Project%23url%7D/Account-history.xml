@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Account-history" path="/account/account-history" id="67a89453-7f36-41a9-9f4a-7e4221d5a9d3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="67a89453-7f36-41a9-9f4a-7e4221d5a9d3fileName">Account-history</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Account-history" id="b9072154-eab6-4d7c-b5b7-dcef47eaaa18" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Account Transaction History" id="a5dc6139-4c2a-4f77-8c33-5a33abea0e77" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://${#Project#url}</con:endpoint>
+      <con:request>{\r
+\r
+    "assetID": "jxchange_api_test",\r
+\r
+    "content": {\r
+\r
+        "accountNumber": "109686",\r
+\r
+        "accountType": "D",\r
+\r
+        "startDate": "2022-05-20",\r
+\r
+        "endDate": "2022-05-23"\r
+\r
+    },\r
+\r
+    "uuid": "string"\r
+\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

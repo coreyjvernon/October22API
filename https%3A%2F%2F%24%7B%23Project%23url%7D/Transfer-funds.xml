@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Transfer-funds" path="/monetary/transfer-funds" id="3f1f224a-d761-4b0c-b842-d2935bf72d05" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3f1f224a-d761-4b0c-b842-d2935bf72d05fileName">Transfer-funds</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Transfer-funds" id="cfc7db76-e1a8-49b5-8dec-4223f100fd08" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Transfer Funds" id="8a865b66-6e69-4c95-969e-948ce79e6ccd" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://${#Project#url}</con:endpoint>
+      <con:request>{\r
+    "assetID": "{{assetID}}",\r
+    "content": {\r
+        "amount": 10.00,\r
+        "batchNumber": "100",\r
+        "description": "transfer funds",\r
+        "effectiveDate": "2021-11-2",\r
+            "fromAccount": {\r
+            "accountNumber": "109686",\r
+            "accountType": "D",\r
+            "transactionCode": ""\r
+        },\r
+        "toAccount": {\r
+            "accountNumber": "109736",\r
+            "accountType": "D",\r
+            "transactionCode": ""\r
+        },\r
+        "coreSpecificFields": {\r
+            "principalReduction": "N"\r
+        }\r
+    },\r
+    "uuid": "string"\r
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>
