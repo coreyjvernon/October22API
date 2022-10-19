@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operationGroup type="mutation" name="Mutations" id="10d5bdf0-3839-4bf6-b10c-dd8f95ebd7f0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="10d5bdf0-3839-4bf6-b10c-dd8f95ebd7f0fileName">Mutations</con:setting>
+  </con:settings>
+</con:operationGroup>

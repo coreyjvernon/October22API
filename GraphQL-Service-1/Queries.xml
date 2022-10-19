@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operationGroup type="query" name="Queries" id="3f43fb75-32a1-4d67-b2ff-1c571cf6f4a3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3f43fb75-32a1-4d67-b2ff-1c571cf6f4a3fileName">Queries</con:setting>
+  </con:settings>
+  <con:graphQLOperation name="continents" bindingOperationName="continents" id="a664ef1d-43cc-4e5f-84ce-d3a3401ef50b">
+    <con:settings/>
+    <con:graphQLRequest name="continents" id="a576b4ad-d597-4b60-a498-f9014c8e73d4">
+      <con:settings/>
+      <con:endpoint>https://countries.trevorblades.com/</con:endpoint>
+      <con:request>{"query":"query {\n  continents {\n    code\n    name\n    countries {\n      code\n      name\n      native\n      phone\n      continent {\n        code\n        name\n      }\n      currency\n      languages {\n        code\n        name\n        native\n        rtl\n      }\n      emoji\n      emojiU\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="continent" bindingOperationName="continent" id="5f1a7069-42d1-4e30-8687-7e1b3423c59e">
+    <con:settings/>
+    <con:graphQLRequest name="continent" id="1340aed2-226a-41e8-93e9-f67f208d7759">
+      <con:settings/>
+      <con:endpoint>https://countries.trevorblades.com/</con:endpoint>
+      <con:request>{"query":"query {\n  continent(code: \"string\") {\n    code\n    name\n    countries {\n      code\n      name\n      native\n      phone\n      continent {\n        code\n        name\n      }\n      currency\n      languages {\n        code\n        name\n        native\n        rtl\n      }\n      emoji\n      emojiU\n    }\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="countries" bindingOperationName="countries" id="a4b665b5-db9c-4244-85f2-372dbd02a99d">
+    <con:settings/>
+    <con:graphQLRequest name="countries" id="1ec554bc-078a-42df-be5d-3fab9d6d5e93">
+      <con:settings/>
+      <con:endpoint>https://countries.trevorblades.com/</con:endpoint>
+      <con:request>{"query":"query {\n  countries {\n    code\n    name\n    native\n    phone\n    continent {\n      code\n      name\n      countries {\n        code\n        name\n        native\n        phone\n        currency\n        languages {\n          code\n          name\n          native\n          rtl\n        }\n        emoji\n        emojiU\n      }\n    }\n    currency\n    emoji\n    emojiU\n  }\n}\n","operationName":null,"variables":null}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="country" bindingOperationName="country" id="420bb14d-2fc7-4e1f-96cb-403d537f1a15">
+    <con:settings/>
+    <con:graphQLRequest name="country" id="2d5d07e5-b841-43f2-a29b-4f9b564ddf40">
+      <con:settings/>
+      <con:endpoint>https://countries.trevorblades.com/</con:endpoint>
+      <con:request>{"query":"query {\n  country(code: \"string\") {\n    code\n    name\n    native\n    phone\n    continent {\n      code\n      name\n      countries {\n        code\n        name\n        native\n        phone\n        currency\n        languages {\n          code\n          name\n          native\n          rtl\n        }\n        emoji\n        emojiU\n      }\n    }\n    currency\n    emoji\n    emojiU\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="languages" bindingOperationName="languages" id="51cd0b26-be74-4503-a5b2-ca875096a764">
+    <con:settings/>
+    <con:graphQLRequest name="languages" id="9c14f0b8-ad33-4a40-81eb-3dff2acd151f">
+      <con:settings/>
+      <con:endpoint>https://countries.trevorblades.com/</con:endpoint>
+      <con:request>{"query":"query {\n  languages {\n    code\n    name\n    native\n    rtl\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+  <con:graphQLOperation name="language" bindingOperationName="language" id="723fd8a8-8fe0-48eb-90d9-216d926a43e3">
+    <con:settings/>
+    <con:graphQLRequest name="language" id="b19f39a3-953e-40df-9521-19bf06540453">
+      <con:settings/>
+      <con:endpoint>https://countries.trevorblades.com/</con:endpoint>
+      <con:request>{"query":"query {\n  language(code: \"string\") {\n    code\n    name\n    native\n    rtl\n  }\n}\n","operationName":null,"variables":null}</con:request>
+    </con:graphQLRequest>
+  </con:graphQLOperation>
+</con:operationGroup>
